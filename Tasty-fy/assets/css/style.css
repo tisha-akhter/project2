@@ -1,0 +1,619 @@
+:root {
+    --maroon: rgb(150, 27, 57);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+*::selection {
+    background: var(--maroon);
+    color: #fff;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+body {
+    background: #f7f7f7;
+    font-family: "Roboto", sans-serif;
+
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Header CSS */
+header {
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.icon {
+    color: var(--maroon);
+    font-size: 1.5rem;
+}
+
+.logo {
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.navbar a {
+    font-weight: bolder;
+    color: #666;
+    font-size: 1rem;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--maroon);
+    font-size: 1.5rem;
+}
+
+.navbar a.active {
+    color: #666 !important;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.navbar a.active:hover {
+    color: var(--maroon);
+    font-size: 1.5rem;
+}
+
+button#menu.navbar-toggler {
+    padding: 0;
+}
+
+.navbar {
+    position: relative;
+}
+
+.navbar-toggler {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-toggler-icon {
+    display: inline;
+}
+
+.cross-icon {
+    display: none;
+    color: var(--maroon);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.navbar-collapse {
+    display: none;
+}
+
+.navbar-collapse.active {
+    display: block;
+}
+
+.open .cross-icon {
+    display: inline;
+}
+
+.open .navbar-toggler-icon {
+    display: none;
+}
+
+.btn-outline {
+    background: var(--maroon);
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f7f7f7;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav .nav-link {
+        margin: 10px;
+        padding: 10px;
+        display: block;
+        border: 5px solid rgba(0, 0, 0, 0.1);
+        border-left: 5px solid var(--maroon);
+    }
+
+    .navbar-nav .nav-link:hover {
+        background: var(--maroon);
+        font-size: 1.5rem;
+        color: #fff;
+        border-left: 5px solid #666;
+    }
+}
+
+/* Home Section */
+#home .top-banner {
+    width: 100%;
+    background: url('../images/top-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 8rem 0 9rem;
+}
+
+#home h1 {
+    color: var(--maroon);
+}
+
+.button {
+    color: #fff;
+}
+
+.button:hover {
+    color: var(--maroon);
+}
+
+img.img-fluid {
+    width: 100%;
+    height: 400px;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(3rem);
+    }
+}
+
+@media (max-width: 768px) {
+    #home .top-banner {
+        padding: 6rem 0;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    .button {
+        font-size: 1rem;
+    }
+}
+
+/* about us starts here */
+.about-us {
+    padding: 100px 0;
+    background-color: rgb(22, 22, 23);
+}
+
+.h2 {
+    font-size: 2.5rem;
+    color: var(--maroon);
+    margin-top: 150px;
+}
+
+.para {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.list {
+    color: #666;
+}
+
+.img-scale {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.img-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 50px 0;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+}
+
+
+/* about us ends */
+
+/* Specialty Section */
+#specialty {
+    padding: 50px 30px;
+}
+
+#specialty .container {
+    padding: 2rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+    color: #666;
+}
+
+.heading span {
+    color: var(--maroon);
+}
+
+#specialty .card {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#specialty .card-img-top {
+    width: 100%;
+    height: 200px;
+}
+
+#specialty .card-title {
+    color: var(--maroon);
+    font-weight: 700;
+}
+
+#specialty .btn-primary {
+    background-color: var(--maroon);
+    border-color: var(--maroon);
+}
+
+#specialty .btn-primary:hover {
+    background-color: #fff;
+    color: var(--maroon);
+}
+
+#specialty .card {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#specialty .card-img-top {
+    width: 100%;
+    height: 200px;
+}
+
+#specialty .card-title {
+    color: var(--maroon);
+    font-weight: 700;
+}
+
+#specialty .btn-primary {
+    background-color: var(--maroon);
+    border-color: var(--maroon);
+}
+
+#specialty .btn-primary:hover {
+    background-color: #fff;
+    color: var(--maroon);
+}
+
+
+#specialty .overlay {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.5s 0.3s ease-in-out;
+    background: var(--maroon);
+}
+
+#specialty .overlay-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+#specialty .card:hover .overlay {
+    top: 0;
+}
+
+/* menu style starts */
+
+/* Menu Tabs */
+
+.menu-tab .filters {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-tab .filters .filter {
+    margin: 20px 10px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.menu-tab .filters .filter img {
+    width: 60px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.filters li {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filters li.active,
+.filters li:hover {
+    background-color: var(--maroon);
+    color: #fff;
+}
+
+/* Menu Items */
+.dish-box {
+    background: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.dish-box:hover {
+    transform: translateY(-15px);
+}
+
+.dish-img img {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+}
+
+.dish-rating {
+    margin-top: 5px;
+    font-size: 14px;
+    color: var(--maroon);
+}
+
+.dish-title {
+    margin: 5px 0;
+}
+
+.dish-title h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.dish-title p {
+    font-size: 14px;
+    color: #666;
+}
+
+.dish-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dish-info ul li {
+    text-align: center;
+}
+
+.dish-info ul li p {
+    font-size: 14px;
+    color: #666;
+}
+
+.dish-info ul li b {
+    font-size: 16px;
+    color: #333;
+}
+
+.dist-bottom-row ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background: #d8d6d6;
+}
+
+.dist-bottom-row ul li b {
+    font-size: 18px;
+    color: #333;
+}
+
+.dish-add-btn {
+    background-color: transparent;
+    color: var(--maroon);
+    border: 2px solid var(--maroon);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.dish-add-btn:hover {
+    background-color: var(--maroon);
+    color: #fff;
+    border-color: var(--maroon);
+}
+
+Filter :root {
+    --maroon: rgb(150, 27, 57);
+}
+
+/* our team section */
+
+.section {
+    padding: 60px 0;
+}
+
+/* Slick Slider */
+.team-slider {
+    margin: 0 -10px;
+}
+
+.slick-slide {
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* Team Member Box */
+.team-member {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.member-photo {
+    background-size: cover;
+    background-position: center;
+    height: 260px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.member-name {
+    font-size: 20px;
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #eee;
+    border-radius: 50%;
+    color: #333;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--maroon);
+    color: #fff;
+}
+
+/* Slick Navigation Arrows */
+.slick-prev,
+.slick-next {
+    background: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background: var(--maroon);
+    color: #fff;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 20px;
+}
+
+/* our team ends */
+
+/* footer */
+
+footer {
+    color: #666;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    background: #fff;
+}
+
+.fab {
+    color: var(--maroon);
+}
+
+.fas {
+    color: var(--maroon);
+}
+#Copyright{
+    background:var(--maroon) ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color: #fff;
+}
